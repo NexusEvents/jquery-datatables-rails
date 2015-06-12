@@ -23,7 +23,7 @@ Due to an error displaying the plus icon in a recent version of this gem, the re
 1 - Add to your Gemfile:
 
 ```ruby
-gem 'jquery-datatables-rails', '~> 3.1.1'
+gem 'jquery-datatables-rails', '~> 3.3.0'
 ```
 
 2 - Install the gem:
@@ -209,7 +209,7 @@ These files can be found in the [assets directory][assets].
 AutoFill     : dataTables.autoFill
 ColReorder   : dataTables.colReorder
 ColVis       : dataTables.colVis
-FixedColumns : dataTables.fixedColumn
+FixedColumns : dataTables.fixedColumns
 FixedHeader  : dataTables.fixedHeader
 KeyTable     : dataTables.keyTable
 Scroller     : dataTables.scroller

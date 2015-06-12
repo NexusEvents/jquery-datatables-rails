@@ -1,4 +1,4 @@
-/*! DataTables Bootstrap integration
+/*! DataTables Bootstrap 3 integration
  * ©2011-2014 SpryMedia Ltd - datatables.net/license
  */
 
@@ -19,9 +19,9 @@ var factory = function( $, DataTable ) {
 /* Set the defaults for DataTables initialisation */
 $.extend( true, DataTable.defaults, {
 	dom:
-		"<'row'<'col-50-percent'l><'col-50-percent'f>r>"+
-		"t"+
-		"<'row'<'col-50-percent'i><'col-50-percent'p>>",
+		"<'row'<'col-sm-30'l><'col-sm-30'f>>" +
+		"<'row'<'col-sm-60'tr>>" +
+		"<'row'<'col-sm-25'i><'col-sm-45'p>>",
 	renderer: 'bootstrap'
 } );
 
@@ -45,7 +45,7 @@ DataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, bu
 		var i, ien, node, button;
 		var clickHandler = function ( e ) {
 			e.preventDefault();
-			if ( e.data.action !== 'ellipsis' ) {
+			if ( !$(e.currentTarget).hasClass('disabled') ) {
 				api.page( e.data.action ).draw( false );
 			}
 		};
@@ -148,7 +148,7 @@ if ( DataTable.TableTools ) {
 			}
 		},
 		"print": {
-			"info": "DTTT_print_info modal"
+			"info": "DTTT_print_info"
 		},
 		"select": {
 			"row": "active"
